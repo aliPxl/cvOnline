@@ -1,0 +1,195 @@
+/*de body en html */
+body, html{
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans';
+    font-weight: lighter;
+    /*background-color: lightgrey;*/
+}
+/*in deze div zit alles*/
+.main{
+    display:flex;
+    min-height: 100vh;
+}
+/*dit is de linker div met mijn foto die geef ik een achtergrond kleur grijs en mag niet kleiner worden dan 30 vw en tot slot krijgt de rechterkant een zwarte border*/
+.left{
+    min-width:30vw;
+    background-color: lightgrey;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+}
+/*linked in logo groter maken*/
+.linkedIn{
+    color: black;
+    font-size: 30px;
+    float: left;
+}
+/*profiel foto kleiner maken, zwarte rand, rond */
+.profielFoto{
+    margin-top: 5%;
+    border: 2px solid black;
+    border-radius:100px;
+    width: 8vw;
+    height: 18vh;
+}
+/*dit is het bovenste gedeelte van mijn linker div met mijn foto en een p deze worden altijd gecentreerd en padding van 5%*/
+.personal{
+
+    text-align: center;
+    padding-left: 5%;
+}
+/*displiy flex voor persoonlijke gegevens*/
+.leftUnder{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1a1515;
+}
+
+.leftUnder>p>i{
+    font-size:20px ;
+    font-weight: bold;
+}
+.leftUnder>p:nth-child(odd){
+    font-size:30px;
+    font-weight: bold;
+}
+/*talen in ol*/
+.talen>p{
+    font-size:25px;
+}
+
+/*rechter div zwart maken en alle text in het wit 100vh om de rest te pakken en padding left and top*/
+.right{
+    width:100vw;
+    padding-left: 5%;
+    /* padding-top: 5%; */
+    background: black;
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+/*dit is om de 3 icons van opleiding stage en </> programmeer talen */
+.right>div>p{
+    font-size: 30px;
+}
+
+/*grad is een extra classe die ik heb gegeven aan de icons  die */
+.grad{
+    font-size: 20px;
+}
+
+/*linken wit maken en underline weghalen en een kleine margin tegenover de list items*/
+.right>div>ul>li>a{
+    color: white;
+    text-decoration: none;
+    margin-left: 5%;
+}
+
+/*container waar mijn progress bar in zit*/
+.container {
+    /*background-color: rgb(192, 192, 192);*/
+    background: white;
+    width: 80%;
+    height: 50%;
+    border-radius: 15px;
+}
+/*deze div is de eerste laag van mijn progress bar en onderaan ga ik dmv een andere classe appart definieren hoe breed deze moet zijn*/
+.skill {
+    background-color: rgba(64, 227, 11, 0.87);
+    /*color: white;*/
+    padding:0.5%;
+    text-align: right;
+    /*font-size: 15px;*/
+    color: black;
+    border-radius: 15px;
+    font-weight:bold;
+    height: 10px;
+}
+
+.html {
+    width: 80%;
+}
+.css{
+    width: 65%
+}
+.javascript {
+    width: 60%;
+}
+
+.php {
+    width: 40%;
+}
+
+.laravel {
+    width: 50%;
+}
+
+.SQL {
+    width: 30%;
+}
+
+.cS {
+    width: 50%;
+}
+/*FOOTER*/
+footer{
+    display: inline-block;
+    width: 100vh;
+    color: black;
+    background: white;
+    border-top: 1px black;
+}
+.footerCenter{
+    width: 100vw;
+    display: inline-block;
+margin-left: 5vw;
+}
+.footerRight{
+    display: inline-block;
+}
+/*hieronder komt mijn media querrey als het scherm smaller word dan 696 px en kan niet smaller worden dan 312px%*/
+@media  screen and (min-width:312px) and (max-width:696px){
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .profielFoto{
+        width: 80px;
+        height:80px;
+        border-radius: 50px;
+    }
+
+    .body{
+        background: green;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .linkedIn{
+        float: left;
+    }
+    .left{
+        width:100% ;
+        border-right:0px;
+        border-bottom:1px solid white;
+    }
+    .right{
+        width: 100%;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+    .skill{
+
+        height: 3vh;
+    }
+    .leftUnder>p:nth-child(odd){
+        /*font-size:20px;*/
+    }
+    .footerLeft{
+        font-size: 15px;
+    }
+    .footerCenter{
+        margin-left: 2vw;
+    }
+}
